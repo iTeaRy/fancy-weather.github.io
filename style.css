@@ -20,8 +20,15 @@
     .tune-up {
       position: absolute;
       top: 0;
-      width: 100%;
-      margin-left: -4.5%; } }
+      right: 0;
+      flex-direction: column; } }
+  @media (max-width: 800px) {
+    .tune-up {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0; } }
 
 .settings {
   display: flex;
@@ -34,7 +41,11 @@
     margin-right: 20px; }
     @media (max-width: 1200px) {
       .settings__btn-refresh {
-        margin-right: 0; } }
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        font-size: 40px;
+        line-height: 60px; } }
   .settings__btn-language {
     display: inline-block;
     background: darkslategrey;
@@ -46,17 +57,34 @@
     color: #ffffff; }
     @media (max-width: 1200px) {
       .settings__btn-language {
-        margin-right: 0; } }
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        font-size: 40px;
+        line-height: 60px; } }
     .settings__btn-language-content {
       display: none;
       position: absolute;
       width: 50px;
       background: darkslategray; }
+      @media (max-width: 1200px) {
+        .settings__btn-language-content {
+          width: 60px;
+          font-size: 40px;
+          line-height: 60px;
+          z-index: 2; } }
   .settings__btn-temperature {
     display: inline-block;
     background: darkslategrey;
     width: 50px;
     height: 30px; }
+    @media (max-width: 1200px) {
+      .settings__btn-temperature {
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        font-size: 40px;
+        line-height: 60px; } }
 
 .search {
   display: flex; }
@@ -65,7 +93,7 @@
     height: 24px; }
     @media (max-width: 1200px) {
       .search__input {
-        width: 106px; } }
+        margin-left: 10px; } }
   .search__submit {
     display: inline-block;
     background: darkslategrey;
@@ -73,13 +101,16 @@
     height: 30px; }
     @media (max-width: 1200px) {
       .search__submit {
-        width: 50px; } }
+        width: 110px; } }
+    @media (max-width: 800px) {
+      .search__submit {
+        width: 140px; } }
   .search__voice {
     display: inline-block;
     background: darkslategrey;
     width: 30px;
     height: 30px; }
-    @media (max-width: 1200px) {
+    @media (max-width: 800px) {
       .search__voice {
         display: none; } }
     .search__voice div {
@@ -98,6 +129,9 @@
       .data__city {
         height: auto;
         font-size: 70px; } }
+    @media (max-width: 800px) {
+      .data__city {
+        margin-top: 90px; } }
   .data__date {
     display: inline-block;
     width: 100%;
@@ -111,8 +145,11 @@
     font-size: 15px; }
     .data__weather_temperature {
       display: inline-block;
-      font-size: 200px;
+      font-size: 140px;
       letter-spacing: 0; }
+      @media (max-width: 800px) {
+        .data__weather_temperature {
+          margin-left: 10vh; } }
     .data__weather_icon {
       display: inline-block;
       width: 150px;
@@ -174,9 +211,12 @@
     margin-top: 10px; }
     @media (max-width: 1200px) {
       .map__cord {
-        font-size: 21px;
+        font-size: 20px;
         display: inline; } }
   @media (max-width: 1200px) {
+    .map {
+      top: unset; } }
+  @media (max-width: 700px) {
     .map {
       position: unset;
       width: 350px;
@@ -185,10 +225,10 @@
 #map {
   width: 400px;
   height: 400px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 700px) {
     #map {
-      width: 350px;
-      height: 350px; } }
+      width: 94vw;
+      height: 319px; } }
 
 .button-hover:hover {
   cursor: pointer;
